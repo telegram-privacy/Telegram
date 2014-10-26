@@ -60,7 +60,7 @@ import org.telegram.android.MessageObject;
 import org.telegram.messenger.ConnectionsManager;
 import org.telegram.android.MessagesController;
 import org.telegram.android.NotificationCenter;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.UserConfig;
 import org.telegram.messenger.Utilities;
 import org.telegram.ui.Adapters.BaseFragmentAdapter;
@@ -1422,7 +1422,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                 if (user != null) {
                     currentUser = user;
                 }
-                actionBarLayer.setSubtitle(LocaleController.formatUserStatus(currentUser));
+//                actionBarLayer.setSubtitle(LocaleController.formatUserStatus(currentUser));
             }
         } else {
             lastPrintString = printString;

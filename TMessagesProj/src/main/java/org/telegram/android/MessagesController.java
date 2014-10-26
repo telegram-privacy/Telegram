@@ -25,7 +25,7 @@ import org.telegram.messenger.ConnectionsManager;
 import org.telegram.messenger.FileLoader;
 import org.telegram.messenger.FileLog;
 import org.telegram.messenger.MessageKeyData;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.RPCRequest;
 import org.telegram.messenger.TLClassStore;
 import org.telegram.messenger.TLObject;

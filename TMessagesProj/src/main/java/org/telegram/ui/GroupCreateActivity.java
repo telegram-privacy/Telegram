@@ -42,7 +42,7 @@ import org.telegram.android.ContactsController;
 import org.telegram.messenger.FileLog;
 import org.telegram.android.MessagesController;
 import org.telegram.android.NotificationCenter;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.UserConfig;
 import org.telegram.messenger.Utilities;
 import org.telegram.ui.Views.ActionBar.ActionBarLayer;
@@ -565,7 +565,7 @@ public class GroupCreateActivity extends BaseFragment implements NotificationCen
             int placeHolderId = AndroidUtilities.getUserAvatarForId(user.id);
             holder.avatarImage.setImage(photo, "50_50", placeHolderId);
 
-            holder.messageTextView.setText(LocaleController.formatUserStatus(user));
+//            holder.messageTextView.setText(LocaleController.formatUserStatus(user));
             if (user.status != null && user.status.expires > ConnectionsManager.getInstance().getCurrentTime()) {
                 holder.messageTextView.setTextColor(0xff357aa8);
             } else {

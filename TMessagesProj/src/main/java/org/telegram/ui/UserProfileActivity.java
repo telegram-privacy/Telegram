@@ -32,7 +32,7 @@ import org.telegram.android.ContactsController;
 import org.telegram.messenger.FileLog;
 import org.telegram.android.MessagesController;
 import org.telegram.android.NotificationCenter;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.android.MessageObject;
 import org.telegram.ui.Adapters.BaseFragmentAdapter;
 import org.telegram.ui.Views.ActionBar.ActionBarLayer;
@@ -527,7 +527,7 @@ public class UserProfileActivity extends BaseFragment implements NotificationCen
                 textView.setTypeface(typeface);
 
                 textView.setText(ContactsController.formatName(user.first_name, user.last_name));
-                onlineText.setText(LocaleController.formatUserStatus(user));
+//                onlineText.setText(LocaleController.formatUserStatus(user));
 
                 TLRPC.FileLocation photo = null;
                 TLRPC.FileLocation photoBig = null;

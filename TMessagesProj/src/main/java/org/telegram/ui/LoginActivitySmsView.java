@@ -32,7 +32,7 @@ import org.telegram.messenger.FileLog;
 import org.telegram.android.MessagesController;
 import org.telegram.android.MessagesStorage;
 import org.telegram.android.NotificationCenter;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.RPCRequest;
 import org.telegram.messenger.UserConfig;
 import org.telegram.ui.Views.SlideView;
@@ -48,6 +48,7 @@ public class LoginActivitySmsView extends SlideView implements NotificationCente
     private String registered;
     private EditText codeField;
     private TextView confirmTextView;
+    private TextView smsDelayText;
     private TextView timeText;
     private TextView problemText;
     private Bundle currentParams;
@@ -82,6 +83,8 @@ public class LoginActivitySmsView extends SlideView implements NotificationCente
         confirmTextView = (TextView)findViewById(R.id.login_sms_confirm_text);
         codeField = (EditText)findViewById(R.id.login_sms_code_field);
         codeField.setHint(LocaleController.getString("Code", R.string.Code));
+        smsDelayText = (TextView) findViewById(R.id.login_sms_code_delay);
+        smsDelayText.setText("인증코드 전송에는 1분정도의 시간이 소요됩니다.");
         timeText = (TextView)findViewById(R.id.login_time_text);
         problemText = (TextView)findViewById(R.id.login_problem);
         TextView wrongNumber = (TextView) findViewById(R.id.wrong_number);

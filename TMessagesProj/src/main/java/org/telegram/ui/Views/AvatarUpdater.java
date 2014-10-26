@@ -152,7 +152,7 @@ public class AvatarUpdater implements NotificationCenter.NotificationCenterDeleg
                         NotificationCenter.getInstance().removeObserver(AvatarUpdater.this, NotificationCenter.FileDidUpload);
                         NotificationCenter.getInstance().removeObserver(AvatarUpdater.this, NotificationCenter.FileDidFailUpload);
                         if (delegate != null) {
-                            delegate.didUploadedPhoto((TLRPC.InputFile)args[1], smallPhoto, bigPhoto);
+                            delegate.didUploadedPhoto((TLRPC.InputFile) args[1], smallPhoto, bigPhoto);
                         }
                         uploadingAvatar = null;
                         if (clearAfterUpdate) {

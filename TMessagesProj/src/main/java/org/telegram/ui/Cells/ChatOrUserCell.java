@@ -24,7 +24,7 @@ import org.telegram.android.LocaleController;
 import org.telegram.messenger.TLRPC;
 import org.telegram.messenger.ConnectionsManager;
 import org.telegram.android.MessagesController;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.UserConfig;
 import org.telegram.android.ImageReceiver;
 
@@ -387,7 +387,7 @@ public class ChatOrUserCell extends BaseCell {
                 if (subLabel != null) {
                     onlineString = subLabel;
                 } else {
-                    onlineString = LocaleController.formatUserStatus(user);
+//                    onlineString = LocaleController.formatUserStatus(user);
                     if (user != null && (user.id == UserConfig.getClientUserId() || user.status != null && user.status.expires > ConnectionsManager.getInstance().getCurrentTime())) {
                         currentOnlinePaint = onlinePaint;
                         onlineString = LocaleController.getString("Online", R.string.Online);

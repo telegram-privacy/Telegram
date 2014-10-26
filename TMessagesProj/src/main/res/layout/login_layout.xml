@@ -151,6 +151,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/login_sms_code_delay"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16dp"
+                android:textColor="#808080"
+                android:lineSpacingExtra="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/login_time_text"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
@@ -255,7 +266,7 @@
                 <!--android:layout_below="@+id/login_register_info"-->
                 <!--android:id="@+id/login_avatar_button">-->
 
-                <!--<org.telegram.ui.Views.BackupImageView-->
+                <!--<BackupImageView-->
                     <!--android:id="@+id/settings_avatar_image"-->
                     <!--android:layout_width="fill_parent"-->
                     <!--android:layout_height="fill_parent"-->

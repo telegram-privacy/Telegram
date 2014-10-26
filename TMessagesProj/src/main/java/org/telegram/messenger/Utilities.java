@@ -349,23 +349,23 @@ public class Utilities {
         SerializedData data = new SerializedData();
         data.writeRaw(messageKey);
         data.writeRaw(authKey, x, 32);
-        byte[] sha1_a = Utilities.computeSHA1(data.toByteArray());
+        byte[] sha1_a = computeSHA1(data.toByteArray());
 
         data = new SerializedData();
         data.writeRaw(authKey, 32 + x, 16);
         data.writeRaw(messageKey);
         data.writeRaw(authKey, 48 + x, 16);
-        byte[] sha1_b = Utilities.computeSHA1(data.toByteArray());
+        byte[] sha1_b = computeSHA1(data.toByteArray());
 
         data = new SerializedData();
         data.writeRaw(authKey, 64 + x, 32);
         data.writeRaw(messageKey);
-        byte[] sha1_c = Utilities.computeSHA1(data.toByteArray());
+        byte[] sha1_c = computeSHA1(data.toByteArray());
 
         data = new SerializedData();
         data.writeRaw(messageKey);
         data.writeRaw(authKey, 96 + x, 32);
-        byte[] sha1_d = Utilities.computeSHA1(data.toByteArray());
+        byte[] sha1_d = computeSHA1(data.toByteArray());
 
         SerializedData aesKey = new SerializedData();
         aesKey.writeRaw(sha1_a, 0, 8);

@@ -29,7 +29,7 @@ import org.telegram.messenger.TLObject;
 import org.telegram.messenger.TLRPC;
 import org.telegram.messenger.ConnectionsManager;
 import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
+import org.telegram.safechat.R;
 import org.telegram.messenger.RPCRequest;
 import org.telegram.ui.Views.ActionBar.BaseFragment;
 import org.telegram.ui.Views.SlideView;
@@ -99,6 +99,7 @@ public class LoginActivityPhoneView extends SlideView implements AdapterView.OnI
         });
 
         codeField = (EditText)findViewById(R.id.login_county_code_field);
+
         codeField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
@@ -155,6 +156,10 @@ public class LoginActivityPhoneView extends SlideView implements AdapterView.OnI
             }
         });
         phoneField = (EditText)findViewById(R.id.login_phone_field);
+
+        TelephonyManager tm = (TelephonyManager) ApplicationLoader.applicationContext.getSystemService(Context.TELEPHONY_SERVICE);
+
+        phoneField.setText(tm.getLine1Number());
         phoneField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
