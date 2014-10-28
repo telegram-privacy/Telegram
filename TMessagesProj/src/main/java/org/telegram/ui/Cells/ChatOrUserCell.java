@@ -390,7 +390,7 @@ public class ChatOrUserCell extends BaseCell {
 //                    onlineString = LocaleController.formatUserStatus(user);
                     if (user != null && (user.id == UserConfig.getClientUserId() || user.status != null && user.status.expires > ConnectionsManager.getInstance().getCurrentTime())) {
                         currentOnlinePaint = onlinePaint;
-                        onlineString = LocaleController.getString("Online", R.string.Online);
+//                        onlineString = LocaleController.getString("Online", R.string.Online);
                     }
                 }
 
